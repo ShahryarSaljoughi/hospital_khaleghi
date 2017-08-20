@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %} ورود  {% endblock %}
+
+<!-- bootstrap css and js:  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- *********************  -->
+
+
+{% block mainContent %}
+  <h1>Sign In</h1>
+
+<div class="form-group">
+  
+<form action="" method="post" name="login">
+      {{ form.hidden_tag() }} <!-- CSRF attck prevention -->
+      <p>
+          username
+          {{ form.username }}<br>
+      </p>
+      <p>
+          password
+          {{form.password}} <br>
+      </p>
+
+
+      <p>{{ form.remember_me }} Remember Me</p>
+      <p><input type="submit" value="Sign In"></p>
+  </form>
+</div>
+{% endblock %}

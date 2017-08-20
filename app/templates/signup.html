@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} ثبت نام  {% endblock %}
+{% block mainContent %}
+
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+
+        <label for="username"> نام کاربری</label>
+        <input type="text" id="username" name="username"><br>
+
+        <label for"password">کلمه عبور</label>
+        <input type="password" id="password" name="password"><br>
+
+        <label for"firstname">نام</label>
+        <input type="text" id="firstname" name="firstname"><br>
+
+        <label for"lastname">نام خانوادگی</label>
+        <input type="text" id="lastname" name="lastname"><br>
+        <!-- <form>         -->
+            <input type="radio" name="gender" value="male"> <p dir="rtl"> آقا </p> 
+            <input type="radio" name="gender" value="female"> <p dir="rtl"> خانم </p> 
+        <!-- </form> -->
+        <p><input type="submit" value="register"/></p>
+           
+    </form>
+
+{% endblock %}
